@@ -7,6 +7,7 @@ Vendor: <https://kubernetes.io/docs/tasks/extend-kubectl/kubectl-plugins/>
 ## Demo
 
 ![demo1](docs/demo1.png)
+
 ![demo2](docs/demo2.png)
 
 ---
@@ -15,7 +16,7 @@ Vendor: <https://kubernetes.io/docs/tasks/extend-kubectl/kubectl-plugins/>
 
 ```bash
 git clone https://github.com/devops202607/week5.git
-cd week5
+cd week5/scripts
 chmod +x kubeplugin
 sudo cp kubeplugin /usr/local/bin/kubectl-stat
 ```
