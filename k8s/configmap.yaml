@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: app-v1-html
+  namespace: week5
+data:
+  index.html: |
+    Version: 1.0.0
