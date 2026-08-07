@@ -1,0 +1,31 @@
+apiVersion: traefik.io/v1alpha1
+kind: TraefikService
+metadata:
+  name: app-canary
+  namespace: week5
+spec:
+  weighted:
+    services:
+    - name: app-v1
+      port: 80
+      weight: 75
+    - name: app-v2
+      port: 80
+      weight: 25
+---
+apiVersion: traefik.io/v1alpha1
+kind: IngressRoute
+metadata:
+  name: app-canary
+  namespace: week5
+spec:
+  entryPoints:
+    - web
+    - websecure
+  routes:
+  - match: Host(`week5.195-201-121-117.nip.io`)
+    kind: Rule
+    services:
+    - name: app-canary
+      kind: TraefikService
+  tls: {}

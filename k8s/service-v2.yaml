@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: app-v2
+  namespace: week5
+spec:
+  selector:
+    app: app-v2
+  ports:
+  - port: 80
+    targetPort: 80
