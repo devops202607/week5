@@ -1,4 +1,3 @@
----
 apiVersion: batch/v1
 kind: CronJob
 metadata:
@@ -9,8 +8,11 @@ spec:
     spec:
       template:
         spec:
-          containers:
-            - name: hello
-              image: bash
-              command: ["echo", "Hello world"]
           restartPolicy: OnFailure
+          containers:
+            - name: cronjob
+              image: bash
+              command:
+                - bash
+                - -c
+                - echo "hello"
