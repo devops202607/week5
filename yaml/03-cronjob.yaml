@@ -2,6 +2,7 @@ apiVersion: batch/v1
 kind: CronJob
 metadata:
   name: cronjob
+  namespace: week5-5
 spec:
   schedule: "*/5 * * * *"
   jobTemplate:

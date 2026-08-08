@@ -5,6 +5,8 @@ Generate a complete set of Kubernetes manifests (YAML) for the resources describ
 
 Where a manifest references a ConfigMap or Secret, create it as well.
 
+All resources must be created in the `week5-5` namespace. Set `metadata.namespace: week5-5` for every namespaced resource.
+
 Create the following resources:
 
 1. Pod `app` — image `gcr.io/k8s-k3s/demo:v1.0.0`, HTTP port 8000.
